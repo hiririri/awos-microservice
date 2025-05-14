@@ -3,6 +3,7 @@ package eu.dauphine.aows.product;
 import eu.dauphine.aows.product.entity.Product;
 import eu.dauphine.aows.product.repository.ProductRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 import static org.springframework.boot.SpringApplication.run;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class ProductApplication {
 
     public static void main(String[] args) {
