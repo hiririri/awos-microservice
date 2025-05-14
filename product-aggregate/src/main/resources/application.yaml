@@ -1,2 +1,5 @@
-server:
-  port: 8082
+spring:
+  application:
+    name: product-aggregate
+  config:
+    import: "optional:configserver:http://localhost:8888"
