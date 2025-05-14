@@ -12,6 +12,7 @@
         <module>product-service</module>
         <module>review-service</module>
         <module>product-aggregate</module>
+        <module>recommendation-service</module>
     </modules>
 
     <properties>

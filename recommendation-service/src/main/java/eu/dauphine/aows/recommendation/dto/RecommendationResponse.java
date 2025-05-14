@@ -1,27 +1,23 @@
-package eu.dauphine.aows.review.entity;
+package eu.dauphine.aows.recommendation.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Review {
+public class RecommendationResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long recommendationId;
 
     private Long productId;
 
     private String author;
 
-    private String subject;
+    private Double rate;
 
     private String content;
 

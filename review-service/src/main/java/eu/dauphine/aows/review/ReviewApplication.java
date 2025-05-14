@@ -21,6 +21,7 @@ public class ReviewApplication {
         public DataInitializer(ReviewRepository reviewRepository) {
             reviewRepository.saveAll(List.of(
                     Review.builder().productId(1L).author("John").content("This is a review").subject("Subject 1").build(),
+                    Review.builder().productId(1L).author("John").content("This is another review").subject("Subject 1").build(),
                     Review.builder().productId(2L).author("John").content("This is another review 1").subject("Subject 2").build(),
                     Review.builder().productId(3L).author("John").content("This is another review 2").subject("Subject 3").build()
                                             ));

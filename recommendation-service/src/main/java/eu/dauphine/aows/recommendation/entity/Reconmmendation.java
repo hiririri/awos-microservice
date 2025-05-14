@@ -1,4 +1,4 @@
-package eu.dauphine.aows.review.entity;
+package eu.dauphine.aows.recommendation.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Review {
+@Table(name = "recommendations")
+public class Reconmmendation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +22,7 @@ public class Review {
 
     private String author;
 
-    private String subject;
+    private Double rate;
 
     private String content;
 
