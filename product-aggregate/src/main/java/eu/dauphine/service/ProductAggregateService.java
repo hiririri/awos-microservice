@@ -19,8 +19,8 @@ public class ProductAggregateService {
 
     public AggregateDto getProductById(Long productId) {
         var product = productServiceClient.getProductById(productId);
-        var reviews = reviewServiceClient.getReviewByProductId(productId);
-        var recommendations = recommendationServiceClient.getRecommendationByProductId(productId);
+        var reviews = reviewServiceClient.getReviewsByProductId(productId);
+        var recommendations = recommendationServiceClient.getRecommendationsByProductId(productId);
 
         return AggregateDto.builder()
                            .product(product)
