@@ -1,6 +1,7 @@
 package eu.dauphine;
 
-import eu.dauphine.aows.recommendation.repository.RecommendationRepository;
+import eu.dauphine.entity.Recommendation;
+import eu.dauphine.repository.RecommendationRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.stereotype.Component;
@@ -21,9 +22,9 @@ public class RecommendationApplication {
     public static class DataInitializer {
         public DataInitializer(RecommendationRepository recommendationRepository) {
             recommendationRepository.saveAll(List.of(
-                    eu.dauphine.aows.recommendation.entity.Reconmmendation.builder().productId(1L).author("John").content("Recommendation 1").build(),
-                    eu.dauphine.aows.recommendation.entity.Reconmmendation.builder().productId(2L).author("Jack").content("Recommendation 2").build(),
-                    eu.dauphine.aows.recommendation.entity.Reconmmendation.builder().productId(3L).author("Jill").content("Recommendation 3").build()
+                    Recommendation.builder().productId(1L).author("John").content("Recommendation 1").build(),
+                    Recommendation.builder().productId(2L).author("Jack").content("Recommendation 2").build(),
+                    Recommendation.builder().productId(3L).author("Jill").content("Recommendation 3").build()
                                                     ));
         }
     }
