@@ -4,9 +4,28 @@ server:
 spring:
   application:
     name: config-server
+
+  security:
+    user:
+      name: root
+      password: s3cr3t
+
   cloud:
     config:
       server:
         git:
           uri: https://github.com/hiririri/microservice-config-repo
           default-label: master
+
+logging:
+  level:
+    root: info
+
+management:
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+  endpoints:
+    web:
+      exposure:
+        include: "*"

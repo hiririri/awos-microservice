@@ -2,4 +2,4 @@ spring:
   application:
     name: product-aggregate
   config:
-    import: "optional:configserver:http://localhost:8888"
+    import: "optional:configserver:http://root:s3cr3t@localhost:8888"
